@@ -11,6 +11,7 @@
         'view/sale.xml',
         'view/picking.xml',        
         'view/website_sale_templates.xml',
+        'view/account.xml',
     ],
     'installable': True,
     'auto_install': False,
