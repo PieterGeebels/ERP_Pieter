@@ -9,8 +9,7 @@
     'depends' : ['sale', 'stock', 'account', 'website_sale'],
     'data': [
         'view/sale.xml',
-        'view/picking.xml',
-        'view/warranty.xml',
+        'view/picking.xml',        
         'view/website_sale_templates.xml',
     ],
     'installable': True,

@@ -31,7 +31,7 @@ class StockMove(osv.Model):
                 'xx_insurance_method': move.procurement_id.sale_line_id.order_id.xx_insurance_method.id,
                 'xx_delivery_date': move.procurement_id.sale_line_id.order_id.xx_delivery_date,
                 'xx_payment_method': move.procurement_id.sale_line_id.order_id.xx_payment_method.id,
-                'xx_warranty_period': move.procurement_id.sale_line_id.order_id.xx_warranty_period.id,
+                
                 'origin': move.origin,
                 'company_id': move.company_id and move.company_id.id or False,
                 'move_type': move.group_id and move.group_id.move_type or 'direct',

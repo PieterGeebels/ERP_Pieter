@@ -8,8 +8,7 @@
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
                 <field name="client_order_ref" position="after">
-                    <field name="xx_delivery_date"/>
-                    <field name="xx_warranty_period"/>
+                    <field name="xx_delivery_date"/>                    
                     <field name="xx_insurance_method"/>
                 </field>
                 
