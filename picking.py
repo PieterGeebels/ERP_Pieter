@@ -11,12 +11,11 @@ from openerp import workflow
 class StockPicking(osv.Model):
     _inherit = 'stock.picking'
     
+    #niet veel veranderd sinds stappenplan(3)
     _columns = {
-        'xx_delivery_date': fields.date(string='Delivery date'),
-        
+        'xx_delivery_date': fields.date(string='Delivery date'),        
         'xx_payment_method': fields.many2one('xx.payment.method',
-                                             string='Payment method'),
-   
+                                             string='Payment method'),   
         'xx_insurance_method': fields.many2one('xx.insurance.method',
                                               string='Insurance method')
     }

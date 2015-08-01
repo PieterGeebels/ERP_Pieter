@@ -9,8 +9,7 @@
                 <field name="account_id" position="after">
                     <field name="xx_insurance_method"/>
                 </field>
-                <field name="amount_tax" position="after">
-                    <field name="xx_insurance_percentage" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                <field name="amount_tax" position="after">                    
                     <field name="xx_insurance_cost" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                 </field>
             </field>

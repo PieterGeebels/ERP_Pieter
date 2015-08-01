@@ -28,10 +28,11 @@ class StockMove(osv.Model):
         else:
             move = self.browse(cr, uid, move_ids, context=context)[0]
             values = {
+                      #insurance methode toegevoegd, normaalgezien ook warrant, maar het bleek dat de error ergens uit deze richting kwam.
+                      #deze code is echter standaard, dus ik heb mijn custom warrant maar weggedaan
                 'xx_insurance_method': move.procurement_id.sale_line_id.order_id.xx_insurance_method.id,
                 'xx_delivery_date': move.procurement_id.sale_line_id.order_id.xx_delivery_date,
-                'xx_payment_method': move.procurement_id.sale_line_id.order_id.xx_payment_method.id,
-                
+                'xx_payment_method': move.procurement_id.sale_line_id.order_id.xx_payment_method.id,                
                 'origin': move.origin,
                 'company_id': move.company_id and move.company_id.id or False,
                 'move_type': move.group_id and move.group_id.move_type or 'direct',
