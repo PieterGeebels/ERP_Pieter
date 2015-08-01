@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
+           
 
         <record id="view_order_form" model="ir.ui.view">
             <field name="model">sale.order</field>
@@ -8,7 +9,8 @@
             <field name="arch" type="xml">
                 <field name="client_order_ref" position="after">
                     <field name="xx_delivery_date"/>
-                    <field name="xx_warranty_method"/>
+                    <field name="xx_warranty_period"/>
+                    <field name="xx_insurance_method"/>
                 </field>
                 
                 <xpath expr="//form//field[@name='client_order_ref']" position="after">
@@ -16,6 +18,27 @@
                 </xpath>
             </field>
         </record>
+        
+        <record id="view_insurance_methods_form" model="ir.ui.view">
+            <field name="model">xx.insurance.method</field>
+            <field name="arch" type="xml">
+                <tree string="Insurance Methods" editable="bottom">
+                    <field name="xx_insurance_name"/>
+                    <field name="xx_insurance_percentage"/>
+                 
+                </tree>
+            </field>
+        </record>
+        
+        <record id="action_insurance_method" model="ir.actions.act_window">
+            <field name="name">Insurance Methods</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">xx.insurance.method</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>
+        
+        <menuitem id="menu_insurance_methods" action="action_insurance_method" parent="base.menu_base_config"/> 
         
         <record id="view_payment_methods_form" model="ir.ui.view">
             <field name="model">xx.payment.method</field>

@@ -8,6 +8,8 @@
             <field name="arch" type="xml">
                 <field name="origin" position="after">
                     <field name="xx_delivery_date"/>
+                    <field name="xx_warranty_period"/>
+                    <field name="xx_insurance_method"/>
                 </field>
                 
                 <xpath expr="//form//field[@name='origin']" position="after">

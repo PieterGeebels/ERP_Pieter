@@ -2,7 +2,7 @@
 {
     'name' : 'KH Leuven',
     'version' : '0.1',
-    'author' : 'Eric Lembregts',
+    'author' : 'Pieter Geebels',
     'category' : 'KH Leuven',
     'description' : """
 """,
@@ -10,7 +10,7 @@
     'data': [
         'view/sale.xml',
         'view/picking.xml',
-        'view/warranty_method.xml',
+        'view/warranty.xml',
         'view/website_sale_templates.xml',
     ],
     'installable': True,
